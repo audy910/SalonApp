@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClientActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tan">
+
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/nameClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_ivory"
+            android:padding="20dp"
+            android:hint="Name"
+            android:textColor="@color/darkSieanna"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:inputType="number"
+            android:id="@+id/numberClientProfile"
+            android:layout_toRightOf="@id/nameClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_ivory"
+            android:padding="20dp"
+            android:hint="Number"
+            android:textColor="@color/darkSieanna"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/nameClient" />
+        <TextView
+            android:id="@+id/hairTreatments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameClient"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_ivory"
+            android:text="Select what you would like done"
+            android:textColor="@color/darkSieanna"
+            android:padding="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+
+        <CheckBox
+            android:id="@+id/extensions"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/hairTreatments"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Extensions"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/color"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/extensions"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Color"
+            android:textColor="@color/darkSieanna" />
+
+        <CheckBox
+            android:id="@+id/cut"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/color"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center|center_horizontal"
+            android:text="Cut"
+            android:textColor="@color/darkSieanna" />
+
+        <ImageView
+            android:id="@+id/hairLengthImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/cut"
+            app:srcCompat="@drawable/hairlength" />
+
+        <EditText
+            android:id="@+id/currentHairLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/desiredLengthOfHair"
+            android:layout_toRightOf="@id/hairLengthImage"
+            android:ems="10"
+            android:hint="current length of hair"
+            android:inputType="number"
+            android:textColor="@color/darkSieanna"
+            android:textColorHint="@color/darkSieanna" />
+
+        <EditText
+            android:id="@+id/desiredLengthOfHair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/previousTreatments"
+            android:layout_toRightOf="@id/hairLengthImage"
+            android:ems="10"
+            android:hint="desired length of hair"
+            android:inputType="number"
+            android:textColor="@color/darkSieanna"
+            android:textColorHint="@color/darkSieanna" />
+        <EditText
+            android:id="@+id/previousTreatments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hairLengthImage"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_ivory"
+            android:hint="Previous hair treatments"
+
+            android:padding="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/requestStylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/previousTreatments"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_ivory"
+            android:hint="Request A Stylist"
+            android:padding="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submitClientInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/requestStylist"
+            android:layout_marginLeft="25dp"
+            android:text="Submit"
+            android:textColor="@color/darkLava" />
+    </RelativeLayout>
+
+        </ScrollView>
+
+
+
+</LinearLayout>

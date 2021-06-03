@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ivory">#FCFFEB</color>
+    <color name="tan">#CEAE8C</color>
+    <color name="darkLava">#423629</color>
+    <color name="bronze">#BF8A4B</color>
+    <color name="grey">#514C44</color>
+    <color name="outerSpace">#31393C</color>
+    <color name="darkSieanna">#482425</color>
+    <color name="cream">#F2E6BB</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

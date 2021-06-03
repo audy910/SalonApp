@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:id="@+id/drawer_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tan">
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout"
+            ></include>
+
+        <!--    <FrameLayout-->
+        <!--        android:id="@+id/main_container"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="match_parent"-->
+        <!--        android:layout_below="@+id/main_page_toolbar"-->
+        <!--        android:background="@color/tan">-->
+
+        <ImageView
+            android:id="@+id/logoSignOn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/main_page_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/icon" />
+
+        <EditText
+            android:id="@+id/emailSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_page_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/button"
+            android:hint="Email"
+            android:padding="15dp"
+            android:textColor="@color/darkLava"
+            android:textSize="24sp"></EditText>
+
+        <EditText
+            android:id="@+id/passwordSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailSignIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/button"
+            android:hint="Password"
+            android:padding="15dp"
+            android:textColor="@color/darkLava"
+            android:textSize="24sp"></EditText>
+
+        <Button
+            android:id="@+id/submitSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passwordSignIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/button"
+            android:text="Submit"
+            android:textColor="@color/darkLava"
+            android:textSize="24sp"></Button>
+
+        <TextView
+            android:id="@+id/registerLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passwordSignIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Need an account"
+            android:textColor="@color/darkSieanna"
+            android:textStyle="bold" />
+
+        <!--    </FrameLayout>-->
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
