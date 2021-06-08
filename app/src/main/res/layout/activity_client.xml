@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ClientActivity">
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout_main"></include>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -77,7 +80,7 @@
 
 
         <CheckBox
-            android:id="@+id/extensions"
+            android:id="@+id/extensionsBox"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -95,10 +98,10 @@
             android:textSize="14sp" />
 
         <CheckBox
-            android:id="@+id/color"
+            android:id="@+id/colorBox"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/extensions"
+            android:layout_below="@id/extensionsBox"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -112,10 +115,10 @@
             android:textColor="@color/darkSieanna" />
 
         <CheckBox
-            android:id="@+id/cut"
+            android:id="@+id/cutBox"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/color"
+            android:layout_below="@+id/colorBox"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -132,7 +135,7 @@
             android:id="@+id/hairLengthImage"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_below="@id/cut"
+            android:layout_below="@id/cutBox"
             app:srcCompat="@drawable/hairlength" />
 
         <EditText
@@ -192,12 +195,175 @@
             android:padding="20dp"
             android:textSize="18dp"
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dayOfWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/requestStylist"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_ivory"
+            android:text="Select what days work best..."
+            android:textColor="@color/darkSieanna"
+            android:padding="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+
+        <CheckBox
+            android:id="@+id/monBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/dayOfWeek"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Monday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/TuesBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/dayOfWeek"
+            android:layout_toRightOf="@+id/monBox"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Tuesday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/WedBox"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/dayOfWeek"
+            android:layout_toRightOf="@+id/TuesBox"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Wednesday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/ThursBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/monBox"
+
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Thursday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/FriBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/monBox"
+            android:layout_toRightOf="@+id/ThursBox"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Friday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/SatBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/monBox"
+            android:layout_toRightOf="@+id/FriBox"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Saturday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/SundayBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/ThursBox"
+
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Sunday"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/anyBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/ThursBox"
+            android:layout_toRightOf="@+id/SundayBox"
+            android:layout_weight="1"
+            android:background="@drawable/button_ivory"
+            android:gravity="center"
+            android:text="Any/Soonest"
+            android:textColor="@color/darkSieanna"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/submitClientInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/requestStylist"
+            android:layout_below="@id/SundayBox"
             android:layout_marginLeft="25dp"
             android:text="Submit"
             android:textColor="@color/darkLava" />

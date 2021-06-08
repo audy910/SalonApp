@@ -50,7 +50,7 @@
             />
 
         <CheckBox
-            android:id="@+id/extensions"
+            android:id="@+id/extensionsBox"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -68,10 +68,10 @@
             android:textSize="14sp" />
 
         <CheckBox
-            android:id="@+id/color"
+            android:id="@+id/colorBox"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/extensions"
+            android:layout_below="@id/extensionsBox"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -86,10 +86,10 @@
             android:textColor="@color/darkSieanna" />
 
         <CheckBox
-            android:id="@+id/cut"
+            android:id="@+id/cutBox"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/color"
+            android:layout_below="@+id/colorBox"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -114,7 +114,7 @@
             android:id="@+id/currentHairLength"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cut"
+            android:layout_below="@id/cutBox"
             android:layout_toRightOf="@id/hairLengthImage"
             android:ems="10"
             android:hint="current length of hair"

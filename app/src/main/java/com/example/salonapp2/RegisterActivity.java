@@ -1,24 +1,24 @@
 package com.example.salonapp2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.annotation.NonNull;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+        import android.app.ProgressDialog;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.text.TextUtils;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.google.android.gms.tasks.Task;
+        import com.google.firebase.auth.AuthResult;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
 
-import java.util.Objects;
+        import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -26,6 +26,19 @@ public class RegisterActivity extends AppCompatActivity {
     private Button submit;
     private ProgressDialog loadingBar;
     private FirebaseAuth mAuth;
+    String email = "";
+    String password = "";
+    String confirmPassword = "";
+    public  void setEmail(String emailE) {
+        email = emailE;
+    }
+
+    public void setPassword(String passwordE) {
+        password = passwordE;
+    }
+
+    public void setConfirmPassword(String confirmPasswordE) { confirmPassword = confirmPasswordE;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +63,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void createAccount()
     {
-        String email = UserEmail.getText().toString();
-        String password = UserPassword.getText().toString();
-        String confirmPassword = UserConfirmPassword.getText().toString();
+        getTextInfo();
 
         if(TextUtils.isEmpty(email))
         {
             Toast.makeText(this, "please enter email...",Toast.LENGTH_SHORT).show();
+
+        }
+        else if(emailRegex(email))
+        {
+            Toast.makeText(this, "please enter valid email...",Toast.LENGTH_SHORT).show();
 
         }
         else if(TextUtils.isEmpty(password))
@@ -98,6 +114,13 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    private void getTextInfo() {
+        email = UserEmail.getText().toString();
+        password = UserPassword.getText().toString();
+        confirmPassword = UserConfirmPassword.getText().toString();
+
+    }
+
     private void SendUserToStylistActivity() {
         Intent StylistIntent = new Intent(RegisterActivity.this, StylistActivity.class);
         StylistIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -105,4 +128,13 @@ public class RegisterActivity extends AppCompatActivity {
         finish();
 
     }
+    public static Boolean emailRegex(String emailAddress)
+    {
+        if(emailAddress.matches(".*@[a-z]*[.][a-z]{2,3}")){
+            return false;
+        }        return true;
+
+    }
+
+
 }
